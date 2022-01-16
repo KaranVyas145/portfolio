@@ -1,0 +1,120 @@
+:root{
+    --secondary: rgb(120, 104, 230);
+    --primary: rgb(21, 151, 229);
+    --title-font-size: 3rem;
+    --heading-font-size: 1.5rem;
+    --content-font-size:1.1rem;
+    --main-bg:rgb(237, 238, 247);
+    --text-color-one: rgb(255, 255, 255);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--main-bg);
+}
+
+/* Navigation Bar */
+header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+header #navbar ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 30px;
+    background-color: var(--secondary);
+}
+
+header #navbar ul li{
+    padding:0 20px;
+    margin:0 10px;
+}
+
+header #navbar ul li a{
+    text-decoration: none;
+    color: var(--text-color-one);
+    font-size: var(--content-font-size);
+    font-weight: 600;
+    position: relative;
+}
+
+
+header #navbar ul li a::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background-color:var(--main-bg);
+    position: absolute;
+    top: 25px;
+    left: 0%;
+    transition: 0.5s;
+
+}
+
+/* header #navbar ul li a:hover{
+    background-color: white;
+    color: var(--secondary);
+} */
+
+header #navbar ul li a:hover::after{
+    width: 100%;
+}
+
+/* Home */
+#welcome-section{
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+#welcome-section #profile-img img{
+    border-radius: 50%;
+    position: relative;
+    animation: slide-in-right 0.8s ease-out;
+    height: 600px;
+}
+
+@keyframes slide-in-right {
+    from{
+        right: 500px;
+    }
+    to{
+        right: 0;
+    }
+}
+
+#welcome-section #introduction{
+    text-align: center;
+    position: relative;
+    animation: slide-in-left 1s ease-out;
+}
+
+#welcome-section #introduction h1{
+    font-size: var(--title-font-size);
+}
+
+#welcome-section #introduction h3{
+    font-size: var(--heading-font-size);
+}
+
+@keyframes slide-in-left {
+    from{
+        bottom: 500px;
+    }
+    to{
+        bottom: 0;
+    }
+}
