@@ -12,17 +12,19 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
-body{
+#main{
     background-color: var(--main-bg);
 }
 
 /* Navigation Bar */
 header{
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 2;
+    width: 100%;
 }
 
 header #navbar ul{
@@ -71,7 +73,6 @@ header #navbar ul li a:hover::after{
 
 /* Home */
 #welcome-section{
-    border: 1px solid black;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -80,11 +81,18 @@ header #navbar ul li a:hover::after{
     height: 100vh;
 }
 
+#welcome-section #profile-img{
+    text-align: center;
+   
+}
+
 #welcome-section #profile-img img{
     border-radius: 50%;
     position: relative;
     animation: slide-in-right 0.8s ease-out;
-    height: 600px;
+    width: 700px;
+    max-width: 80%;
+    padding: 40px;
 }
 
 @keyframes slide-in-right {
@@ -102,11 +110,11 @@ header #navbar ul li a:hover::after{
     animation: slide-in-left 1s ease-out;
 }
 
-#welcome-section #introduction h1{
+h1{
     font-size: var(--title-font-size);
 }
 
-#welcome-section #introduction h3{
+h3{
     font-size: var(--heading-font-size);
 }
 
@@ -117,4 +125,12 @@ header #navbar ul li a:hover::after{
     to{
         bottom: 0;
     }
+}
+
+/* Projects */
+#projects{
+    height: 100vh;
+    padding: 100px 40px;
+    border: 1px solid black;
+    text-align: center;
 }
