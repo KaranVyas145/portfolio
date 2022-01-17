@@ -12,6 +12,7 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    font-family: 'Open Sans', sans-serif;
 }
 #main{
     background-color: var(--main-bg);
@@ -103,7 +104,7 @@ header #navbar ul li a:hover::after{
 #welcome-section #introduction{
     text-align: center;
     position: relative;
-    animation: slide-in-left 1s ease-out;
+    animation: slide-in-top 1s ease-out;
     padding:0 50px;
 }
 
@@ -115,7 +116,7 @@ h3{
     font-size: var(--heading-font-size);
 }
 
-@keyframes slide-in-left {
+@keyframes slide-in-top {
     from{
         bottom: 500px;
     }
@@ -240,6 +241,22 @@ h3{
     #project-grid{
         grid-template-columns: repeat(2,1fr);
     }
+
+    #welcome-section #introduction{
+        text-align: center;
+        position: relative;
+        animation: slide-in-left 1s ease-out;
+        padding:0 50px;
+    }
+
+    @keyframes slide-in-left {
+        from{
+            left: 500px;
+        }
+        to{
+            left: 0;
+        }
+    }
 }
 
 @media (max-width:700px){
@@ -250,5 +267,17 @@ h3{
     }
     #project-grid{
         grid-template-columns: repeat(1,1fr);
+    }
+}
+
+@media (max-width:600px){
+    :root{
+        --title-font-size: 2rem;
+        --heading-font-size: 1.4rem;
+        --content-font-size:1rem;
+    }
+
+    #welcome-section{
+        padding: 100px 0;
     }
 }
