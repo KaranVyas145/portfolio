@@ -280,4 +280,8 @@ h3{
     #welcome-section{
         padding: 100px 0;
     }
+
+    #contact-links{
+        flex-direction: column;
+    }
 }
