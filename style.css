@@ -1,302 +1,298 @@
-:root{
-    --secondary: rgb(120, 104, 230);
-    --primary: rgb(198, 207, 255);
-    --title-font-size: 4rem;
-    --sub-heading-font-size: 2rem;
-    --heading-font-size: 3rem;
-    --content-font-size:1.4rem;
-    --caption-font-size:1.6rem;
-    --main-bg:rgb(222, 236, 255);
+:root {
+  --secondary: rgb(120, 104, 230);
+  --primary: rgb(198, 207, 255);
+  --title-font-size: 4rem;
+  --sub-heading-font-size: 2rem;
+  --heading-font-size: 3rem;
+  --content-font-size: 1.4rem;
+  --caption-font-size: 1.6rem;
+  --main-bg: rgb(222, 236, 255);
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    font-family: 'Open Sans', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Open Sans", sans-serif;
 }
-#main{
-    background-color: var(--main-bg);
+
+#main {
+  background-color: var(--main-bg);
+}
+
+h1 {
+  font-size: var(--title-font-size);
+}
+
+h2 {
+  font-size: var(--heading-font-size);
+}
+
+h3 {
+  font-weight: 600;
+  font-size: var(--sub-heading-font-size);
 }
 
 /* Navigation Bar */
-header{
-    position: sticky;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    width: 100%;
-    background-color: var(--secondary);
-    color: white;
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  background-color: var(--secondary);
+  color: white;
 }
 
-header #navbar ul{
-    display: flex;
-    justify-content:space-around;
-    align-items: center;
-    list-style: none;
-    padding: 30px 0;
-    
+header #navbar ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  padding: 30px 0;
 }
 
-header #navbar ul li{
-    margin:0 10px;
+header #navbar ul li {
+  margin: 0 10px;
 }
 
-header #navbar ul li a{
-    text-decoration: none;
-    color: var(--text-color-one);
-    font-size: var(--content-font-size);
-    font-weight: 600;
-    position: relative;
+header #navbar ul li a {
+  text-decoration: none;
+  color: var(--text-color-one);
+  font-size: var(--content-font-size);
+  font-weight: 600;
+  position: relative;
 }
 
-
-header #navbar ul li a::after{
-    content: '';
-    height: 3px;
-    width: 0;
-    background-color:var(--main-bg);
-    position: absolute;
-    top: 30px;
-    left: 0%;
-    transition: 0.5s;
-
+header #navbar ul li a::after {
+  content: "";
+  height: 3px;
+  width: 0;
+  background-color: var(--main-bg);
+  position: absolute;
+  top: 30px;
+  left: 0%;
+  transition: 0.5s;
 }
 
-
-header #navbar ul li a:hover::after{
-    width: 100%;
+header #navbar ul li a:hover::after {
+  width: 100%;
 }
 
-/* Home */
-#welcome-section{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    justify-content: space-around;
-    align-items: center;
-    box-sizing: border-box;
-    height: 100vh;
+/* About */
+#welcome-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-around;
+  align-items: center;
+  box-sizing: border-box;
+  height: 100vh;
 }
 
-#welcome-section #profile-img{
-    text-align: center;
-   
+/* Profile Image  */
+
+#welcome-section #profile-img {
+  text-align: center;
 }
 
-#welcome-section #profile-img img{
-    border-radius: 50%;
-    position: relative;
-    animation: slide-in-right 0.8s ease-out;
-    width: 700px;
-    max-width: 80%;
-    padding: 20px;
+#welcome-section #profile-img img {
+  border-radius: 50%;
+  position: relative;
+  animation: slide-in-right 0.8s ease-out;
+  width: 700px;
+  max-width: 80%;
+  padding: 20px;
 }
 
+/* Animation For Profile Image  */
 @keyframes slide-in-right {
-    from{
-        right: 500px;
-    }
-    to{
-        right: 0;
-    }
+  from {
+    right: 500px;
+  }
+  to {
+    right: 0;
+  }
 }
 
-#welcome-section #introduction{
-    text-align: center;
-    position: relative;
-    animation: slide-in-top 1s ease-out;
-    padding:0 50px;
+/* Introduction Section  */
+#welcome-section #introduction {
+  text-align: center;
+  position: relative;
+  animation: slide-in-top 1s ease-out;
+  padding: 0 50px;
 }
 
-h1{
-    font-size: var(--title-font-size);
-}
-
-h2{
-    font-size: var(--heading-font-size);
-}
-
-h3{
-    font-weight:600;
-    font-size: var(--sub-heading-font-size);
-}
-
+/* Animation for Introduction  */
 @keyframes slide-in-top {
-    from{
-        bottom: 500px;
-    }
-    to{
-        bottom: 0;
-    }
+  from {
+    bottom: 500px;
+  }
+  to {
+    bottom: 0;
+  }
 }
 
 /* Projects */
-#projects{
-    padding: 100px 60px;
-    text-align: center;
-    background-color: rgb(198, 207, 255);
+#projects {
+  padding: 100px 60px;
+  text-align: center;
+  background-color: rgb(198, 207, 255);
 }
 
-
-#project-grid{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-gap: 5rem;
-    margin: 2rem 0;
-    
+#project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5rem;
+  margin: 2rem 0;
 }
 
-
-
-#project-grid a{
-    background-color: rgb(237, 238, 247);
-    text-decoration: none;
-    box-shadow: 10px 10px 20px;
-    transition: 0.5s;
-    color: black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#project-grid a {
+  background-color: rgb(237, 238, 247);
+  text-decoration: none;
+  box-shadow: 10px 10px 20px;
+  transition: 0.5s;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-#project-grid a:hover{
-    transform: scale(1.1);
+#project-grid a:hover {
+  transform: scale(1.1);
 }
 
-#project-grid a img{
-    width: 100%;
+#project-grid a img {
+  width: 100%;
 }
 
-#project-grid a p{
-    font-size: var(--content-font-size);
-    padding: 1rem 0;
+#project-grid a p {
+  font-size: var(--content-font-size);
+  padding: 1rem 0;
 }
 
-#show-button{
-    margin: 4rem 0;
+#show-button {
+  margin: 4rem 0;
 }
 
-#show-all{
-    padding: 10px 20px;
-    width: 180px;
-    border: 2px solid black;
-    overflow: hidden;
-    text-decoration: none;
-    color: black;
-    font-size: var(--content-font-size);
-    font-weight: 600;
-    position: relative;
-    z-index: 1;
+#show-all {
+  padding: 10px 20px;
+  width: 180px;
+  border: 2px solid black;
+  overflow: hidden;
+  text-decoration: none;
+  color: black;
+  font-size: var(--content-font-size);
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
 }
 
-#show-all span{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 0;
-    background-color:rgb(243, 248, 255);
-    z-index: -1;
-    transition: 0.5s ease-in;
+#show-all span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: rgb(243, 248, 255);
+  z-index: -1;
+  transition: 0.5s ease-in;
 }
 
-#show-all:hover span{
-    width: 100%;
+#show-all:hover span {
+  width: 100%;
 }
 
 /* Contact */
-#contact{
-    padding:100px 60px;
-    text-align: center;
-    height: 100%;
+#contact {
+  padding: 100px 60px;
+  text-align: center;
+  height: 100%;
 }
 
-#contact>p{
-    font-size: var(--caption-font-size);
+#contact > p {
+  font-size: var(--caption-font-size);
 }
 
-#contact-links{
-    display: flex;
-    margin: 2rem 0;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
+#contact-links {
+  display: flex;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-#contact-links a{
-    color: black;
-    text-decoration: none;
-    font-size: var(--content-font-size);
-    margin: 1rem;
+#contact-links a {
+  color: black;
+  text-decoration: none;
+  font-size: var(--content-font-size);
+  margin: 1rem;
 }
 
-
-#contact-links a i{
-    font-size: 2.5rem;
+#contact-links a i {
+  font-size: 2.5rem;
 }
 
 /* Media Queries */
-@media (max-width:1000px) {
-    #welcome-section{
-        padding: 100px 60px;
-        grid-template-columns: 1fr; 
-        height: 100%;
-    }
+@media (max-width: 1000px) {
+  #welcome-section {
+    padding: 100px 60px;
+    grid-template-columns: 1fr;
+    height: 100%;
+  }
 
-    #welcome-section #profile-img img{
-        width: 500px;
-    }
+  #welcome-section #profile-img img {
+    width: 500px;
+  }
 
-    #project-grid{
-        grid-template-columns: repeat(2,1fr);
-    }
+  #project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-    #welcome-section #introduction{
-        text-align: center;
-        position: relative;
-        animation: slide-in-left 1s ease-out;
-        padding:0 50px;
-    }
+  #welcome-section #introduction {
+    text-align: center;
+    position: relative;
+    animation: slide-in-left 1s ease-out;
+    padding: 0 50px;
+  }
 
-    @keyframes slide-in-left {
-        from{
-            left: 500px;
-        }
-        to{
-            left: 0;
-        }
+  @keyframes slide-in-left {
+    from {
+      left: 500px;
     }
+    to {
+      left: 0;
+    }
+  }
 }
 
-@media (max-width:700px){
-    :root{
-        --title-font-size: 2.4rem;
-        --heading-font-size: 2rem;
-        --content-font-size:1rem;
-        --caption-font-size:1.4rem;
-        --sub-heading-font-size: 1.4rem;
-    }
-    #project-grid{
-        grid-template-columns: repeat(1,1fr);
-    }
+@media (max-width: 700px) {
+  :root {
+    --title-font-size: 2.4rem;
+    --heading-font-size: 2rem;
+    --content-font-size: 1rem;
+    --caption-font-size: 1.4rem;
+    --sub-heading-font-size: 1.4rem;
+  }
+  #project-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
-@media (max-width:600px){
-    :root{
-        --title-font-size: 2rem;
-        --heading-font-size: 1.8rem;
-        --content-font-size:1rem;
-        --caption-font-size:1.2rem;
-        --sub-heading-font-size: 1.5rem;
-    }
+@media (max-width: 600px) {
+  :root {
+    --title-font-size: 2rem;
+    --heading-font-size: 1.8rem;
+    --content-font-size: 1rem;
+    --caption-font-size: 1.2rem;
+    --sub-heading-font-size: 1.5rem;
+  }
 
-    #welcome-section{
-        padding: 100px 0;
-    }
+  #welcome-section {
+    padding: 100px 0;
+  }
 
-    #contact-links{
-        flex-direction: column;
-    }
+  #contact-links {
+    flex-direction: column;
+  }
 }
