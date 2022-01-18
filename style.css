@@ -147,7 +147,7 @@ header #navbar ul li a:hover::after {
   margin: 2rem 0;
 }
 
-#project-grid a {
+#project-grid .project-tile {
   background-color: rgb(237, 238, 247);
   text-decoration: none;
   box-shadow: 10px 10px 20px;
@@ -158,15 +158,15 @@ header #navbar ul li a:hover::after {
   align-items: center;
 }
 
-#project-grid a:hover {
+#project-grid .project-tile:hover {
   transform: scale(1.1);
 }
 
-#project-grid a img {
+#project-grid .project-tile img {
   width: 100%;
 }
 
-#project-grid a p {
+#project-grid .project-tile p {
   font-size: var(--content-font-size);
   padding: 1rem 0;
 }
